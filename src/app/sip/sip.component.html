@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <mat-card>
+    <mat-card-header>
+      <div class="h3">SIP Calculator</div>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-card>
+        <form>
+          <div class="form-group">
+            <label for="range" class="form-label">Investment(Monthly)</label> <span
+              class="float-right">{{investment}}</span>
+            <input type="input" class="form-range" min="0" max="250000" id="range" class="form-control"
+              [(ngModel)]="investment" name="investment">
+          </div>
+          <div class="form-group">
+            <label for="ror" class="form-label">Expected Rate of Return</label> <span class="float-right">{{ror}}</span>
+            <input type="range" class="form-range" min="0" max="30" id="ror" class="form-control" [(ngModel)]="ror"
+              name="ror">
+          </div>
+          <div class="form-group">
+            <label for="noOfYears" class="form-label">Time Period (Months)</label> <span
+              class="float-right">{{noOfYears}}</span>
+            <input type="range" class="form-range" min="0" max="30" id="noOfYears" class="form-control"
+              [(ngModel)]="noOfYears" name="noOfYears">
+          </div>
+          <button class="btn btn-success" (click)="calculate()">Calculate</button> &nbsp;&nbsp;
+          <button class="btn btn-warning">Reset</button>
+          <mat-card *ngIf="sipAmount">
+            Sip Amount= {{sipAmount}}
+            Investment Amt = {{investment*noOfYears}}
+            Total Results = {{sipAmount - (investment*noOfYears)}}
+          </mat-card>
+        </form>
+      </mat-card>
+    </mat-card-content>
+  </mat-card>
+
+  <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="updateFlag"
+    style="height: 100%;width:100%"></highcharts-chart>
+<BR>
+</div>
