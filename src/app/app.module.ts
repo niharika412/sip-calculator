@@ -8,12 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SipComponent } from './sip/sip.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { HighchartsChartModule } from 'highcharts-angular';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { HighchartsChartModule } from 'highcharts-angular';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    HighchartsChartModule
+    ReactiveFormsModule,
+    HighchartsChartModule,
+    MatDividerModule
     ],
   providers: [],
   bootstrap: [AppComponent]

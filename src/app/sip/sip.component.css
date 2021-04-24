@@ -1,0 +1,40 @@
+.outer{
+    background-color: #fafafa;
+    height: 100%;
+    width: 100%;
+}
+mat-card{
+    margin-top:2%
+}
+
+.preview{
+    color:#37a000;
+}
+
+.results,table{
+    background-color: #2b5468;
+    color: #fff;
+}
+.sipForm{
+    background-color: #2b5468;
+    color: white;
+}
+
+.insideForm-lg{
+    font-size: large;
+    margin-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.insideForm-sm{
+    font-size: small;
+    margin-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.highcharts{
+    position: absolute;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y:hidden;
+    display: inline-block;
+}
