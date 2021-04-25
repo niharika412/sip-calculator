@@ -16,6 +16,10 @@ mat-card{
     width: 350px;
 }
 
+input[type="range"]{
+    background-color: blue;
+}
+
 .chart-lg{
     height: 750px;
     width: 750px;
