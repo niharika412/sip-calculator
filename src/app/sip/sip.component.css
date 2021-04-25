@@ -11,6 +11,21 @@ mat-card{
     color:#37a000;
 }
 
+.chart-sm{
+    height: 300px;
+    width: 350px;
+}
+
+.chart-lg{
+    height: 750px;
+    width: 750px;
+}
+
+.preview-sm{
+    color: #37a000;
+    font-size: smaller;
+}
+
 .results,table{
     background-color: #2b5468;
     color: #fff;

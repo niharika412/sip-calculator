@@ -13,8 +13,8 @@ import { SipComponent } from './sip/sip.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { HighchartsChartModule } from 'highcharts-angular';
 import {MatDividerModule} from '@angular/material/divider';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,8 +33,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatIconModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HighchartsChartModule,
-    MatDividerModule
+    MatDividerModule,
+    ChartsModule
+
     ],
   providers: [],
   bootstrap: [AppComponent]

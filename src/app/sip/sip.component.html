@@ -1,4 +1,4 @@
-<div [ngClass]="small ?'container':'container-fluid outer'">
+<div [ngClass]="small ?'container outer':'container-fluid outer'">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -30,9 +30,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="noOfYears" class="form-label">Time Period (Years)</label>
+                  <label for="noOfYears" class="form-label">Time (Years)</label>
                    <button mat-button
-                    class="preview" *ngIf="sipForm.controls.noOfYears.dirty">= {{noOfYears}} Years( {{noOfYears*12}} months)</button>
+                    class="preview-sm" *ngIf="sipForm.controls.noOfYears.dirty">= {{noOfYears}} Years({{noOfYears*12}} months)</button>
                   <input type="range" class="form-range" min="0" max="30" id="noOfYears" class="form-control"
                     [(ngModel)]="noOfYears" name="noOfYears" formControlName="noOfYears">
                 </div>
@@ -63,10 +63,18 @@
       </div>
       <div class="col" *ngIf="calculated">
         <mat-card>
-          <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="updateFlag">
-          </highcharts-chart>
+          <div class="chart-wrapper">
+            <canvas baseChart 
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"
+            [colors]="doughnutChartColors" height="15%" width="20%">
+          </canvas>
+        </div>
         </mat-card>
       </div>
     </div>
   </div>
 </div>
+
+<canvas id="canvas"></canvas>
